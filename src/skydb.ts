@@ -1,9 +1,9 @@
 import { ResponseType } from "axios";
-import { sign } from "tweetnacl";
+import tweetnacl from "tweetnacl";
 
-import { SkynetClient } from "./client";
-import { DEFAULT_DOWNLOAD_OPTIONS } from "./download";
-import { EntryData } from "./mysky";
+import { SkynetClient } from "./client.js";
+import { DEFAULT_DOWNLOAD_OPTIONS } from "./download.js";
+import { EntryData } from "./mysky/index.js";
 import {
   CustomGetEntryOptions,
   DEFAULT_GET_ENTRY_OPTIONS,
@@ -11,7 +11,7 @@ import {
   RegistryEntry,
   SignedRegistryEntry,
   validatePublicKey,
-} from "./registry";
+} from "./registry.js";
 import {
   checkCachedDataLink,
   CustomGetJSONOptions,
@@ -24,23 +24,23 @@ import {
   JSONResponse,
   RawBytesResponse,
   validateEntryData,
-} from "./skydb_v2";
-import { formatSkylink } from "./skylink/format";
-import { BASE64_ENCODED_SKYLINK_SIZE, decodeSkylink, EMPTY_SKYLINK, RAW_SKYLINK_SIZE } from "./skylink/sia";
-import { DEFAULT_UPLOAD_OPTIONS, UploadRequestResponse } from "./upload";
-import { areEqualUint8Arrays } from "./utils/array";
-import { decodeSkylinkBase64, encodeSkylinkBase64 } from "./utils/encoding";
-import { MAX_REVISION } from "./utils/number";
-import { extractOptions } from "./utils/options";
+} from "./skydb_v2.js";
+import { formatSkylink } from "./skylink/format.js";
+import { BASE64_ENCODED_SKYLINK_SIZE, decodeSkylink, EMPTY_SKYLINK, RAW_SKYLINK_SIZE } from "./skylink/sia.js";
+import { DEFAULT_UPLOAD_OPTIONS, UploadRequestResponse } from "./upload.js";
+import { areEqualUint8Arrays } from "./utils/array.js";
+import { decodeSkylinkBase64, encodeSkylinkBase64 } from "./utils/encoding.js";
+import { MAX_REVISION } from "./utils/number.js";
+import { extractOptions } from "./utils/options.js";
 import {
   hexToUint8Array,
   stringToUint8ArrayUtf8,
   toHexString,
   trimUriPrefix,
   uint8ArrayToStringUtf8,
-} from "./utils/string";
-import { JsonData } from "./utils/types";
-import { URI_SKYNET_PREFIX } from "./utils/url";
+} from "./utils/string.js";
+import { JsonData } from "./utils/types.js";
+import { URI_SKYNET_PREFIX } from "./utils/url.js";
 import {
   throwValidationError,
   validateHexString,
@@ -50,12 +50,14 @@ import {
   validateString,
   validateUint8Array,
   validateUint8ArrayLen,
-} from "./utils/validation";
+} from "./utils/validation.js";
 
 type JsonFullData = {
   _data: JsonData;
   _v: number;
 };
+
+const { sign } = tweetnacl;
 
 const JSON_RESPONSE_VERSION = 2;
 

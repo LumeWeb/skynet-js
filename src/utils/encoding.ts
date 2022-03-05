@@ -2,10 +2,10 @@ import base32Decode from "base32-decode";
 import base32Encode from "base32-encode";
 import { fromByteArray, toByteArray } from "base64-js";
 
-import { assertUint64 } from "./number";
-import { BASE32_ENCODED_SKYLINK_SIZE, BASE64_ENCODED_SKYLINK_SIZE } from "../skylink/sia";
-import { stringToUint8ArrayUtf8 } from "./string";
-import { validateStringLen } from "./validation";
+import { assertUint64 } from "./number.js";
+import { BASE32_ENCODED_SKYLINK_SIZE, BASE64_ENCODED_SKYLINK_SIZE } from "../skylink/sia.js";
+import { stringToUint8ArrayUtf8 } from "./string.js";
+import { validateStringLen } from "./validation.js";
 
 const BASE32_ENCODING_VARIANT = "RFC4648-HEX";
 

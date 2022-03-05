@@ -1,4 +1,4 @@
-import { extractOptions } from "./options";
+import { extractOptions } from "./options.js";
 
 describe("extractOptions", () => {
   it("Should throw if the given options are missing a property", () => {

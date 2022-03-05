@@ -1,4 +1,4 @@
-import { validateBigint } from "./validation";
+import { validateBigint } from "./validation.js";
 
 /**
  * The maximum allowed value for an entry revision. Setting an entry revision to this value prevents it from being updated further.

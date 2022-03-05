@@ -10,7 +10,7 @@ import {
   uploadSmallFile,
   uploadSmallFileRequest,
   uploadLargeFileRequest,
-} from "./upload";
+} from "./upload.js";
 import {
   downloadFile,
   downloadFileHns,
@@ -24,7 +24,7 @@ import {
   openFile,
   openFileHns,
   resolveHns,
-} from "./download";
+} from "./download.js";
 // These imports are deprecated but they are needed to export the v1 File
 // methods, which we are keeping so as not to break compatibility.
 import {
@@ -32,10 +32,10 @@ import {
   getEntryData as fileGetEntryData,
   getEntryLink as fileGetEntryLink,
   getJSON as fileGetJSON,
-} from "./file";
-import { pinSkylink } from "./pin";
-import { getEntry, getEntryLinkAsync, getEntryUrl, setEntry, postSignedEntry } from "./registry";
-import { RevisionNumberCache } from "./revision_cache";
+} from "./file.js";
+import { pinSkylink } from "./pin.js";
+import { getEntry, getEntryLinkAsync, getEntryUrl, setEntry, postSignedEntry } from "./registry.js";
+import { RevisionNumberCache } from "./revision_cache.js";
 // These imports are deprecated but they are needed to export the v1 SkyDB
 // methods, which we are keeping so as not to break compatibility.
 import {
@@ -47,7 +47,7 @@ import {
   getEntryData,
   setEntryData,
   deleteEntryData,
-} from "./skydb";
+} from "./skydb.js";
 import {
   deleteJSON as deleteJSONV2,
   getJSON as getJSONV2,
@@ -57,11 +57,11 @@ import {
   getEntryData as getEntryDataV2,
   setEntryData as setEntryDataV2,
   deleteEntryData as deleteEntryDataV2,
-} from "./skydb_v2";
-import { defaultPortalUrl } from "./utils/url";
-import { loadMySky } from "./mysky";
-import { extractDomain, getFullDomainUrl } from "./mysky/utils";
-import { buildRequestHeaders, buildRequestUrl, ExecuteRequestError, Headers } from "./request";
+} from "./skydb_v2.js";
+import { defaultPortalUrl } from "./utils/url.js";
+import { loadMySky } from "./mysky/index.js";
+import { extractDomain, getFullDomainUrl } from "./mysky/utils.js";
+import { buildRequestHeaders, buildRequestUrl, ExecuteRequestError, Headers } from "./request.js";
 
 /**
  * Custom client options.

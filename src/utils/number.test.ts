@@ -1,4 +1,4 @@
-import { assertUint64, MAX_REVISION } from "./number";
+import { assertUint64, MAX_REVISION } from "./number.js";
 
 describe("assertUint64", () => {
   it("should test the assertUint64 function", () => {

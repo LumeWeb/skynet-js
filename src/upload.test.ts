@@ -3,9 +3,9 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
-import { SkynetClient, DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./index";
-import { compareFormData } from "../utils/testing";
-import { splitSizeIntoChunkAlignedParts } from "./upload";
+import { SkynetClient, DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./index.js";
+import { compareFormData } from "../utils/testing.js";
+import { splitSizeIntoChunkAlignedParts } from "./upload.js";
 
 const portalUrl = DEFAULT_SKYNET_PORTAL_URL;
 const client = new SkynetClient(portalUrl);

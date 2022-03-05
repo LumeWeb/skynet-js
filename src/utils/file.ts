@@ -1,7 +1,7 @@
-import mime from "mime/lite";
+import mime from "mime/lite.js";
 import path from "path-browserify";
 
-import { trimPrefix } from "./string";
+import { trimPrefix } from "./string.js";
 
 /**
  * Gets the path for the file.

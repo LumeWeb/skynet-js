@@ -1,5 +1,5 @@
-import { deriveChildSeed, genKeyPairAndSeed, genKeyPairFromSeed, hashDataKey, hashRegistryEntry } from "./crypto";
-import { stringToUint8ArrayUtf8, toHexString } from "./utils/string";
+import { deriveChildSeed, genKeyPairAndSeed, genKeyPairFromSeed, hashDataKey, hashRegistryEntry } from "./crypto.js";
+import { stringToUint8ArrayUtf8, toHexString } from "./utils/string.js";
 
 describe("deriveChildSeed", () => {
   it("should correctly derive a child seed", () => {

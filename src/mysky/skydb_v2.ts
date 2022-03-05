@@ -1,13 +1,13 @@
 /* istanbul ignore file: Much of this functionality is only testable from a browser */
 
-import { EntryData, MySky } from ".";
-import { DELETION_ENTRY_DATA } from "..";
+import { EntryData, MySky } from "./index.js";
+import { DELETION_ENTRY_DATA } from "../index.js";
 import {
   CustomGetEntryOptions,
   DEFAULT_GET_ENTRY_OPTIONS,
   DEFAULT_SET_ENTRY_OPTIONS,
   getEntryLink as registryGetEntryLink,
-} from "../registry";
+} from "../registry.js";
 import {
   CustomGetJSONOptions,
   CustomSetEntryDataOptions,
@@ -19,17 +19,17 @@ import {
   incrementRevision,
   JSONResponse,
   validateEntryData,
-} from "../skydb_v2";
-import { decodeSkylink } from "../skylink/sia";
-import { extractOptions } from "../utils/options";
-import { JsonData } from "../utils/types";
+} from "../skydb_v2.js";
+import { decodeSkylink } from "../skylink/sia.js";
+import { extractOptions } from "../utils/options.js";
+import { JsonData } from "../utils/types.js";
 import {
   validateObject,
   validateOptionalObject,
   validateSkylinkString,
   validateString,
   validateUint8Array,
-} from "../utils/validation";
+} from "../utils/validation.js";
 import {
   decryptJSONFile,
   deriveEncryptedFileKeyEntropy,
@@ -37,8 +37,8 @@ import {
   EncryptedJSONResponse,
   ENCRYPTED_JSON_RESPONSE_VERSION,
   encryptJSONFile,
-} from "./encrypted_files";
-import { deriveDiscoverableFileTweak } from "./tweak";
+} from "./encrypted_files.js";
+import { deriveDiscoverableFileTweak } from "./tweak.js";
 
 // =============
 // SkyDB methods

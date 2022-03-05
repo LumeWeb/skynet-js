@@ -1,13 +1,13 @@
 import { AxiosResponse } from "axios";
 import { DetailedError, HttpRequest, Upload } from "@skynetlabs/tus-js-client";
 
-import { getFileMimeType } from "./utils/file";
-import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options";
-import { formatSkylink } from "./skylink/format";
-import { SkynetClient } from "./client";
-import { JsonData } from "./utils/types";
-import { throwValidationError, validateObject, validateOptionalObject, validateString } from "./utils/validation";
-import { buildRequestHeaders, buildRequestUrl } from "./request";
+import { getFileMimeType } from "./utils/file.js";
+import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options.js";
+import { formatSkylink } from "./skylink/format.js";
+import { SkynetClient } from "./client.js";
+import { JsonData } from "./utils/types.js";
+import { throwValidationError, validateObject, validateOptionalObject, validateString } from "./utils/validation.js";
+import { buildRequestHeaders, buildRequestUrl } from "./request.js";
 
 /**
  * The tus chunk size is (4MiB - encryptionOverhead) * dataPieces, set in skyd.

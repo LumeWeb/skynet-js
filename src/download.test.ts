@@ -2,10 +2,10 @@
 
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import { combineStrings, extractNonSkylinkPath } from "../utils/testing";
+import { combineStrings, extractNonSkylinkPath } from "../utils/testing.js";
 
-import { SkynetClient, DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./index";
-import { trimForwardSlash } from "./utils/string";
+import { SkynetClient, DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./index.js";
+import { trimForwardSlash } from "./utils/string.js";
 
 const portalUrl = DEFAULT_SKYNET_PORTAL_URL;
 const hnsLink = "foo";

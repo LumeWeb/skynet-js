@@ -1,13 +1,13 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
-import { getSkylinkUrlForPortal } from "./download";
-import { MAX_REVISION } from "./utils/number";
-import { DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./utils/url";
-import { SkynetClient } from "./index";
-import { getEntryUrlForPortal, REGEX_REVISION_NO_QUOTES } from "./registry";
-import { checkCachedDataLink, DELETION_ENTRY_DATA } from "./skydb_v2";
-import { MAX_ENTRY_LENGTH } from "./mysky";
+import { getSkylinkUrlForPortal } from "./download.js";
+import { MAX_REVISION } from "./utils/number.js";
+import { DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./utils/url.js";
+import { SkynetClient } from "./index.js";
+import { getEntryUrlForPortal, REGEX_REVISION_NO_QUOTES } from "./registry.js";
+import { checkCachedDataLink, DELETION_ENTRY_DATA } from "./skydb_v2.js";
+import { MAX_ENTRY_LENGTH } from "./mysky/index.js";
 
 // Generated with genKeyPairFromSeed("insecure test seed")
 const [publicKey, privateKey] = [

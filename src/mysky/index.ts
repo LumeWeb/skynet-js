@@ -1,7 +1,7 @@
 /* istanbul ignore file: Much of this functionality is only testable from a browser */
 
-export type { CustomConnectorOptions } from "./connector";
-export { DacLibrary } from "./dac";
+export type { CustomConnectorOptions } from "./connector.js";
+export { DacLibrary } from "./dac.js";
 
 import { Connection, ParentHandshake, WindowMessenger } from "post-me";
 import {
@@ -14,13 +14,13 @@ import {
   PermType,
 } from "skynet-mysky-utils";
 
-import { Connector, CustomConnectorOptions, DEFAULT_CONNECTOR_OPTIONS } from "./connector";
-import { SkynetClient } from "../client";
-import { DacLibrary } from "./dac";
-import { RegistryEntry } from "../registry";
-import { Signature } from "../crypto";
-import { getRedirectUrlOnPreferredPortal, popupCenter, shouldRedirectToPreferredPortalUrl } from "./utils";
-import { validateBoolean, validateString } from "../utils/validation";
+import { Connector, CustomConnectorOptions, DEFAULT_CONNECTOR_OPTIONS } from "./connector.js";
+import { SkynetClient } from "../client.js";
+import { DacLibrary } from "./dac.js";
+import { RegistryEntry } from "../registry.js";
+import { Signature } from "../crypto.js";
+import { getRedirectUrlOnPreferredPortal, popupCenter, shouldRedirectToPreferredPortalUrl } from "./utils.js";
+import { validateBoolean, validateString } from "../utils/validation.js";
 import {
   deleteEntryData as deleteEntryDataV2,
   deleteJSON as deleteJSONV2,
@@ -32,7 +32,7 @@ import {
   setEntryData as setEntryDataV2,
   setJSONEncrypted as setJSONEncryptedV2,
   setJSON as setJSONV2,
-} from "./skydb_v2";
+} from "./skydb_v2.js";
 // These imports are deprecated but they are needed for the v1 MySky SkyDB
 // methods, which we are keeping so as not to break compatibility.
 import {
@@ -46,7 +46,7 @@ import {
   setEntryData,
   setJSON,
   setJSONEncrypted,
-} from "./skydb";
+} from "./skydb.js";
 
 /**
  * The domain for MySky.

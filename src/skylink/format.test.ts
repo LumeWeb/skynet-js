@@ -1,5 +1,5 @@
-import { convertSkylinkToBase32, convertSkylinkToBase64, formatSkylink } from "./format";
-import { uriSkynetPrefix } from "../utils/url";
+import { convertSkylinkToBase32, convertSkylinkToBase64, formatSkylink } from "./format.js";
+import { uriSkynetPrefix } from "../utils/url.js";
 
 const skylinkBase64 = "XABvi7JtJbQSMAcDwnUnmp2FKDPjg8_tTTFP4BwMSxVdEg";
 const skylinkBase32 = "bg06v2tidkir84hg0s1s4t97jaeoaa1jse1svrad657u070c9calq4g";

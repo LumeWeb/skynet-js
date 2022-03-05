@@ -1,5 +1,5 @@
-import { parseSkylink, parseSkylinkBase32 } from "./parse";
-import { combineStrings, extractNonSkylinkPath } from "../../utils/testing";
+import { parseSkylink, parseSkylinkBase32 } from "./parse.js";
+import { combineStrings, extractNonSkylinkPath } from ".../utils/testing";
 
 const skylink = "XABvi7JtJbQSMAcDwnUnmp2FKDPjg8_tTTFP4BwMSxVdEg";
 const skylinkBase32 = "bg06v2tidkir84hg0s1s4t97jaeoaa1jse1svrad657u070c9calq4g";

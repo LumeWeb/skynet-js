@@ -1,17 +1,17 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
-import { getSkylinkUrlForPortal } from "./download";
-import { MAX_REVISION } from "./utils/number";
-import { stringToUint8ArrayUtf8, toHexString } from "./utils/string";
-import { DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./utils/url";
-import { SkynetClient } from "./index";
-import { getEntryUrlForPortal } from "./registry";
-import { checkCachedDataLink, DELETION_ENTRY_DATA, JSONResponse } from "./skydb_v2";
-import { MAX_ENTRY_LENGTH } from "./mysky";
-import { decodeSkylink } from "./skylink/sia";
-import { getSettledValues } from "../utils/testing";
-import { JsonData } from "./utils/types";
+import { getSkylinkUrlForPortal } from "./download.js";
+import { MAX_REVISION } from "./utils/number.js";
+import { stringToUint8ArrayUtf8, toHexString } from "./utils/string.js";
+import { DEFAULT_SKYNET_PORTAL_URL, URI_SKYNET_PREFIX } from "./utils/url.js";
+import { SkynetClient } from "./index.js";
+import { getEntryUrlForPortal } from "./registry.js";
+import { checkCachedDataLink, DELETION_ENTRY_DATA, JSONResponse } from "./skydb_v2.js";
+import { MAX_ENTRY_LENGTH } from "./mysky/index.js";
+import { decodeSkylink } from "./skylink/sia.js";
+import { getSettledValues } from "../utils/testing.js";
+import { JsonData } from "./utils/types.js";
 
 // Generated with genKeyPairFromSeed("insecure test seed")
 const [publicKey, privateKey] = [

@@ -1,6 +1,6 @@
-import { uriHandshakePrefix } from "./url";
-import { hexToUint8Array, stringToUint8ArrayUtf8, toHexString, trimUriPrefix, uint8ArrayToStringUtf8 } from "./string";
-import { randomUnicodeString } from "../../utils/testing";
+import { uriHandshakePrefix } from "./url.js";
+import { hexToUint8Array, stringToUint8ArrayUtf8, toHexString, trimUriPrefix, uint8ArrayToStringUtf8 } from "./string.js";
+import { randomUnicodeString } from ".../utils/testing";
 
 const hnsLink = "doesn";
 

@@ -3,8 +3,8 @@
 import { Connection, ParentHandshake, WindowMessenger } from "post-me";
 import { createIframe, defaultHandshakeAttemptsInterval, defaultHandshakeMaxAttempts } from "skynet-mysky-utils";
 
-import { SkynetClient } from "../client";
-import { addUrlQuery } from "../utils/url";
+import { SkynetClient } from "../client.js";
+import { addUrlQuery } from "../utils/url.js";
 
 /**
  * Custom connector options.

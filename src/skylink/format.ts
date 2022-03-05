@@ -1,8 +1,8 @@
-import { BASE32_ENCODED_SKYLINK_SIZE, BASE64_ENCODED_SKYLINK_SIZE } from "./sia";
-import { decodeSkylinkBase32, decodeSkylinkBase64, encodeSkylinkBase32, encodeSkylinkBase64 } from "../utils/encoding";
-import { trimUriPrefix } from "../utils/string";
-import { URI_SKYNET_PREFIX } from "../utils/url";
-import { validateString, validateStringLen } from "../utils/validation";
+import { BASE32_ENCODED_SKYLINK_SIZE, BASE64_ENCODED_SKYLINK_SIZE } from "./sia.js";
+import { decodeSkylinkBase32, decodeSkylinkBase64, encodeSkylinkBase32, encodeSkylinkBase64 } from "../utils/encoding.js";
+import { trimUriPrefix } from "../utils/string.js";
+import { URI_SKYNET_PREFIX } from "../utils/url.js";
+import { validateString, validateStringLen } from "../utils/validation.js";
 
 /**
  * Converts the given base64 skylink to base32.

@@ -1,15 +1,19 @@
-import { misc, codec } from "sjcl";
+import sjcl from "sjcl";
 import { Buffer } from "buffer";
-import { blake2bFinal, blake2bInit, blake2bUpdate } from "blakejs";
+import blakejs from "blakejs";
 import randomBytes from "randombytes";
-import { hash, sign } from "tweetnacl";
+import tweetnacl from "tweetnacl";
 
-import { RegistryEntry } from "./registry";
-import { hexToUint8Array, stringToUint8ArrayUtf8, toHexString } from "./utils/string";
-import { validateNumber, validateString } from "./utils/validation";
-import { encodeBigintAsUint64, encodePrefixedBytes, encodeUtf8String } from "./utils/encoding";
+import { RegistryEntry } from "./registry.js";
+import { hexToUint8Array, stringToUint8ArrayUtf8, toHexString } from "./utils/string.js";
+import { validateNumber, validateString } from "./utils/validation.js";
+import { encodeBigintAsUint64, encodePrefixedBytes, encodeUtf8String } from "./utils/encoding.js";
 
 export type Signature = Buffer;
+
+const { hash, sign } = tweetnacl;
+const { misc, codec } = sjcl;
+const { blake2bFinal, blake2bInit, blake2bUpdate } = blakejs;
 
 /**
  * Key pair.

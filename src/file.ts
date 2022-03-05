@@ -1,15 +1,15 @@
-import { SkynetClient } from "./client";
-import { EntryData } from "./mysky";
+import { SkynetClient } from "./client.js";
+import { EntryData } from "./mysky/index.js";
 import {
   decryptJSONFile,
   deriveEncryptedFileKeyEntropy,
   deriveEncryptedFileTweak,
   EncryptedJSONResponse,
-} from "./mysky/encrypted_files";
-import { deriveDiscoverableFileTweak } from "./mysky/tweak";
-import { CustomGetEntryOptions, DEFAULT_GET_ENTRY_OPTIONS, getEntryLink as registryGetEntryLink } from "./registry";
-import { CustomGetJSONOptions, DEFAULT_GET_JSON_OPTIONS, JSONResponse } from "./skydb_v2";
-import { validateOptionalObject, validateString } from "./utils/validation";
+} from "./mysky/encrypted_files.js";
+import { deriveDiscoverableFileTweak } from "./mysky/tweak.js";
+import { CustomGetEntryOptions, DEFAULT_GET_ENTRY_OPTIONS, getEntryLink as registryGetEntryLink } from "./registry.js";
+import { CustomGetJSONOptions, DEFAULT_GET_JSON_OPTIONS, JSONResponse } from "./skydb_v2.js";
+import { validateOptionalObject, validateString } from "./utils/validation.js";
 
 // ====
 // JSON

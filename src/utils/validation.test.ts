@@ -8,7 +8,7 @@ import {
   validateStringLen,
   validateUint8Array,
   validateUint8ArrayLen,
-} from "./validation";
+} from "./validation.js";
 
 describe("validateBigint", () => {
   it("Should reject non-bigint input", () => {

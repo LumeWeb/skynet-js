@@ -2,8 +2,8 @@
 
 import { Permission } from "skynet-mysky-utils";
 
-import { SkynetClient } from "../client";
-import { Connector, CustomConnectorOptions } from "./connector";
+import { SkynetClient } from "../client.js";
+import { Connector, CustomConnectorOptions } from "./connector.js";
 
 /**
  * The base DAC class with base and required methods.

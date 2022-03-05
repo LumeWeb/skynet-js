@@ -1,4 +1,4 @@
-import { CustomClientOptions } from "../client";
+import { CustomClientOptions } from "../client.js";
 
 // TODO: Unnecessary, remove.
 /**

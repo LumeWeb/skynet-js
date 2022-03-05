@@ -1,8 +1,8 @@
-import { hashAll } from "../crypto";
-import { decodeSkylinkBase64, encodeSkylinkBase64, encodePrefixedBytes, decodeSkylinkBase32 } from "../utils/encoding";
-import { hexToUint8Array, stringToUint8ArrayUtf8, trimUriPrefix } from "../utils/string";
-import { URI_SKYNET_PREFIX } from "../utils/url";
-import { validateHexString, validateNumber, validateString, validateUint8ArrayLen } from "../utils/validation";
+import { hashAll } from "../crypto.js";
+import { decodeSkylinkBase64, encodeSkylinkBase64, encodePrefixedBytes, decodeSkylinkBase32 } from "../utils/encoding.js";
+import { hexToUint8Array, stringToUint8ArrayUtf8, trimUriPrefix } from "../utils/string.js";
+import { URI_SKYNET_PREFIX } from "../utils/url.js";
+import { validateHexString, validateNumber, validateString, validateUint8ArrayLen } from "../utils/validation.js";
 
 /**
  * The string length of the Skylink after it has been encoded using base32.

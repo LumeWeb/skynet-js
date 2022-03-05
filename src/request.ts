@@ -1,7 +1,7 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 
-import { SkynetClient } from "./client";
-import { addUrlQuery, addUrlSubdomain, ensureUrlPrefix, makeUrl } from "./utils/url";
+import { SkynetClient } from "./client.js";
+import { addUrlQuery, addUrlSubdomain, ensureUrlPrefix, makeUrl } from "./utils/url.js";
 
 export type Headers = { [key: string]: string };
 

@@ -2,8 +2,8 @@ import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
 import { ExecuteRequestError, SkynetClient } from ".";
-import { getSkylinkUrlForPortal } from "./download";
-import { DEFAULT_SKYNET_PORTAL_URL } from "./utils/url";
+import { getSkylinkUrlForPortal } from "./download.js";
+import { DEFAULT_SKYNET_PORTAL_URL } from "./utils/url.js";
 
 const portalUrl = DEFAULT_SKYNET_PORTAL_URL;
 const client = new SkynetClient(portalUrl);

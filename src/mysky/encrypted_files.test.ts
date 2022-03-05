@@ -13,7 +13,7 @@ import {
   ENCRYPTION_NONCE_LENGTH,
   encryptJSONFile,
   padFileSize,
-} from "./encrypted_files";
+} from "./encrypted_files.js";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace

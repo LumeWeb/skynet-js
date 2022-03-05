@@ -9,7 +9,7 @@
     "isolatedModules": true,
 
     "lib": ["dom", "es2020"],
-    "target": "es2019",
+    "target": "esnext",
     "moduleResolution": "node",
     "types": ["node", "jest"],
     "typeRoots": ["./types", "./node_modules/@types"],

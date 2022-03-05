@@ -8,14 +8,14 @@ import {
   EncryptedJSONResponse,
   ENCRYPTED_JSON_RESPONSE_VERSION,
   encryptJSONFile,
-} from "./encrypted_files";
+} from "./encrypted_files.js";
 import {
   CustomGetEntryOptions,
   DEFAULT_GET_ENTRY_OPTIONS,
   DEFAULT_SET_ENTRY_OPTIONS,
   getEntryLink as registryGetEntryLink,
-} from "../registry";
-import { getNextRegistryEntry, getOrCreateRawBytesRegistryEntry, getOrCreateRegistryEntry } from "../skydb";
+} from "../registry.js";
+import { getNextRegistryEntry, getOrCreateRawBytesRegistryEntry, getOrCreateRegistryEntry } from "../skydb.js";
 import {
   CustomGetJSONOptions,
   CustomSetEntryDataOptions,
@@ -26,18 +26,18 @@ import {
   DELETION_ENTRY_DATA,
   JSONResponse,
   validateEntryData,
-} from "../skydb_v2";
-import { deriveDiscoverableFileTweak } from "./tweak";
-import { decodeSkylink } from "../skylink/sia";
-import { extractOptions } from "../utils/options";
-import { JsonData } from "../utils/types";
+} from "../skydb_v2.js";
+import { deriveDiscoverableFileTweak } from "./tweak.js";
+import { decodeSkylink } from "../skylink/sia.js";
+import { extractOptions } from "../utils/options.js";
+import { JsonData } from "../utils/types.js";
 import {
   validateObject,
   validateOptionalObject,
   validateSkylinkString,
   validateString,
   validateUint8Array,
-} from "../utils/validation";
+} from "../utils/validation.js";
 
 // =============
 // SkyDB methods

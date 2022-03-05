@@ -1,5 +1,5 @@
-import { hashAll } from "../crypto";
-import { stringToUint8ArrayUtf8, toHexString } from "../utils/string";
+import { hashAll } from "../crypto.js";
+import { stringToUint8ArrayUtf8, toHexString } from "../utils/string.js";
 
 const DISCOVERABLE_BUCKET_TWEAK_VERSION = 1;
 

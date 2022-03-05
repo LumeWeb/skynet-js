@@ -1,9 +1,9 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import { combineArrays, combineStrings, composeTestCases } from "../../utils/testing";
-import { SkynetClient } from "../client";
-import { DEFAULT_SKYNET_PORTAL_URL } from "../utils/url";
-import { getRedirectUrlOnPreferredPortal, shouldRedirectToPreferredPortalUrl } from "./utils";
+import { combineArrays, combineStrings, composeTestCases } from ".../utils/testing";
+import { SkynetClient } from "../client.js";
+import { DEFAULT_SKYNET_PORTAL_URL } from "../utils/url.js";
+import { getRedirectUrlOnPreferredPortal, shouldRedirectToPreferredPortalUrl } from "./utils.js";
 
 const portalUrl = DEFAULT_SKYNET_PORTAL_URL;
 const client = new SkynetClient(portalUrl);

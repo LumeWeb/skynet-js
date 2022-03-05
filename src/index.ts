@@ -2,7 +2,7 @@
 
 // Main exports.
 
-export { SkynetClient } from "./client";
+export { SkynetClient } from "./client.js";
 export {
   HASH_LENGTH,
   deriveChildSeed,
@@ -11,8 +11,8 @@ export {
   PUBLIC_KEY_LENGTH,
   PRIVATE_KEY_LENGTH,
   SIGNATURE_LENGTH,
-} from "./crypto";
-export { getSkylinkUrlForPortal } from "./download";
+} from "./crypto.js";
+export { getSkylinkUrlForPortal } from "./download.js";
 export {
   DacLibrary,
   MAX_ENTRY_LENGTH,
@@ -22,7 +22,7 @@ export {
   // Deprecated.
   mySkyDevDomain,
   mySkyDomain,
-} from "./mysky";
+} from "./mysky/index.js";
 export {
   decryptJSONFile,
   deriveEncryptedFileKeyEntropy,
@@ -34,19 +34,19 @@ export {
   ENCRYPTION_PATH_SEED_FILE_LENGTH,
   // Deprecated.
   deriveEncryptedFileSeed,
-} from "./mysky/encrypted_files";
-export { deriveDiscoverableFileTweak } from "./mysky/tweak";
-export { getEntryLink, getEntryUrlForPortal, signEntry, validateRegistryProof } from "./registry";
+} from "./mysky/encrypted_files.js";
+export { deriveDiscoverableFileTweak } from "./mysky/tweak.js";
+export { getEntryLink, getEntryUrlForPortal, signEntry, validateRegistryProof } from "./registry.js";
 // Have to export `ExecuteRequestError` as a value instead of as a type or the
 // consumer cannot use `instanceof`.
-export { ExecuteRequestError } from "./request";
-export { DELETION_ENTRY_DATA, getOrCreateSkyDBRegistryEntry } from "./skydb_v2";
-export { convertSkylinkToBase32, convertSkylinkToBase64 } from "./skylink/format";
-export { parseSkylink } from "./skylink/parse";
-export { isSkylinkV1, isSkylinkV2 } from "./skylink/sia";
-export { getRelativeFilePath, getRootDirectory } from "./utils/file";
-export { MAX_REVISION } from "./utils/number";
-export { stringToUint8ArrayUtf8, uint8ArrayToStringUtf8 } from "./utils/string";
+export { ExecuteRequestError } from "./request.js";
+export { DELETION_ENTRY_DATA, getOrCreateSkyDBRegistryEntry } from "./skydb_v2.js";
+export { convertSkylinkToBase32, convertSkylinkToBase64 } from "./skylink/format.js";
+export { parseSkylink } from "./skylink/parse.js";
+export { isSkylinkV1, isSkylinkV2 } from "./skylink/sia.js";
+export { getRelativeFilePath, getRootDirectory } from "./utils/file.js";
+export { MAX_REVISION } from "./utils/number.js";
+export { stringToUint8ArrayUtf8, uint8ArrayToStringUtf8 } from "./utils/string.js";
 export {
   defaultPortalUrl,
   DEFAULT_SKYNET_PORTAL_URL,
@@ -58,7 +58,7 @@ export {
   defaultSkynetPortalUrl,
   uriHandshakePrefix,
   uriSkynetPrefix,
-} from "./utils/url";
+} from "./utils/url.js";
 
 // Re-export Permission API.
 
@@ -75,12 +75,12 @@ export {
 
 // Export types.
 
-export type { CustomClientOptions, RequestConfig } from "./client";
-export type { KeyPair, KeyPairAndSeed, Signature } from "./crypto";
-export type { CustomDownloadOptions, ResolveHnsResponse } from "./download";
-export type { CustomConnectorOptions, EntryData } from "./mysky";
-export type { EncryptedJSONResponse } from "./mysky/encrypted_files";
-export type { CustomPinOptions, PinResponse } from "./pin";
+export type { CustomClientOptions, RequestConfig } from "./client.js";
+export type { KeyPair, KeyPairAndSeed, Signature } from "./crypto.js";
+export type { CustomDownloadOptions, ResolveHnsResponse } from "./download.js";
+export type { CustomConnectorOptions, EntryData } from "./mysky/index.js";
+export type { EncryptedJSONResponse } from "./mysky/encrypted_files.js";
+export type { CustomPinOptions, PinResponse } from "./pin.js";
 export type {
   CustomGetEntryOptions,
   CustomSetEntryOptions,
@@ -88,14 +88,14 @@ export type {
   SignedRegistryEntry,
   RegistryEntry,
   RegistryProofEntry,
-} from "./registry";
+} from "./registry.js";
 export type {
   CustomGetJSONOptions,
   CustomSetJSONOptions,
   CustomSetEntryDataOptions,
   JSONResponse,
   RawBytesResponse,
-} from "./skydb_v2";
-export type { ParseSkylinkOptions } from "./skylink/parse";
-export type { CustomUploadOptions, UploadRequestResponse } from "./upload";
-export type { JsonData } from "./utils/types";
+} from "./skydb_v2.js";
+export type { ParseSkylinkOptions } from "./skylink/parse.js";
+export type { CustomUploadOptions, UploadRequestResponse } from "./upload.js";
+export type { JsonData } from "./utils/types.js";

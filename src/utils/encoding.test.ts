@@ -1,5 +1,5 @@
-import { encodeBigintAsUint64, encodeNumber, encodeUtf8String } from "./encoding";
-import { MAX_REVISION } from "./number";
+import { encodeBigintAsUint64, encodeNumber, encodeUtf8String } from "./encoding.js";
+import { MAX_REVISION } from "./number.js";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace

@@ -1,6 +1,6 @@
 import { Buffer } from "buffer";
 
-import { validateHexString, validateString, validationError } from "./validation";
+import { validateHexString, validateString, validationError } from "./validation.js";
 
 /**
  * Prepends the prefix to the given string only if the string does not already start with the prefix.

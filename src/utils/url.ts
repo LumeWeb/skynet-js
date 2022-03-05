@@ -2,8 +2,8 @@ import { ensureUrl } from "skynet-mysky-utils";
 import urljoin from "url-join";
 import parse from "url-parse";
 
-import { trimForwardSlash, trimSuffix, trimUriPrefix } from "./string";
-import { throwValidationError, validateString } from "./validation";
+import { trimForwardSlash, trimSuffix, trimUriPrefix } from "./string.js";
+import { throwValidationError, validateString } from "./validation.js";
 
 export const DEFAULT_SKYNET_PORTAL_URL = "https://siasky.net";
 

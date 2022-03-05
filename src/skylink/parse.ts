@@ -1,8 +1,8 @@
 import parse from "url-parse";
 
-import { trimForwardSlash, trimSuffix, trimUriPrefix } from "../utils/string";
-import { URI_SKYNET_PREFIX } from "../utils/url";
-import { validateOptionalObject, validateString } from "../utils/validation";
+import { trimForwardSlash, trimSuffix, trimUriPrefix } from "../utils/string.js";
+import { URI_SKYNET_PREFIX } from "../utils/url.js";
+import { validateOptionalObject, validateString } from "../utils/validation.js";
 
 /**
  * Parse skylink options.

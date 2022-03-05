@@ -1,5 +1,5 @@
-import { composeTestCases, combineStrings } from "../../utils/testing";
-import { trimPrefix, trimSuffix } from "./string";
+import { composeTestCases, combineStrings } from ".../utils/testing";
+import { trimPrefix, trimSuffix } from "./string.js";
 import {
   addUrlSubdomain,
   addUrlQuery,
@@ -7,7 +7,7 @@ import {
   getFullDomainUrlForPortal,
   extractDomainForPortal,
   makeUrl,
-} from "./url";
+} from "./url.js";
 
 const portalUrl = DEFAULT_SKYNET_PORTAL_URL;
 const skylink = "XABvi7JtJbQSMAcDwnUnmp2FKDPjg8_tTTFP4BwMSxVdEg";

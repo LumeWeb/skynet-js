@@ -1,4 +1,4 @@
-import { getFileMimeType, getRelativeFilePath, getRootDirectory } from "./file";
+import { getFileMimeType, getRelativeFilePath, getRootDirectory } from "./file.js";
 
 describe("getRelativeFilePath", () => {
   const filepaths = [

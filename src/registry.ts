@@ -1,14 +1,14 @@
 import type { AxiosResponse } from "axios";
 import { Buffer } from "buffer";
-import { sign } from "tweetnacl";
+import tweetnacl from "tweetnacl";
 
-import { SkynetClient } from "./client";
-import { ExecuteRequestError } from "./request";
-import { assertUint64 } from "./utils/number";
-import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options";
-import { ensurePrefix, hexToUint8Array, isHexString, toHexString, trimPrefix, trimUriPrefix } from "./utils/string";
-import { addUrlQuery, makeUrl, URI_SKYNET_PREFIX } from "./utils/url";
-import { hashDataKey, hashRegistryEntry, PUBLIC_KEY_LENGTH, Signature, SIGNATURE_LENGTH } from "./crypto";
+import { SkynetClient } from "./client.js";
+import { ExecuteRequestError } from "./request.js";
+import { assertUint64 } from "./utils/number.js";
+import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options.js";
+import { ensurePrefix, hexToUint8Array, isHexString, toHexString, trimPrefix, trimUriPrefix } from "./utils/string.js";
+import { addUrlQuery, makeUrl, URI_SKYNET_PREFIX } from "./utils/url.js";
+import { hashDataKey, hashRegistryEntry, PUBLIC_KEY_LENGTH, Signature, SIGNATURE_LENGTH } from "./crypto.js";
 import {
   throwValidationError,
   validateBigint,
@@ -18,11 +18,13 @@ import {
   validateString,
   validateUint8Array,
   validateUint8ArrayLen,
-} from "./utils/validation";
-import { newEd25519PublicKey, newSkylinkV2 } from "./skylink/sia";
-import { formatSkylink } from "./skylink/format";
+} from "./utils/validation.js";
+import { newEd25519PublicKey, newSkylinkV2 } from "./skylink/sia.js";
+import { formatSkylink } from "./skylink/format.js";
 import { toByteArray } from "base64-js";
-import { encodeSkylinkBase64 } from "./utils/encoding";
+import { encodeSkylinkBase64 } from "./utils/encoding.js";
+
+const { sign } = tweetnacl;
 
 /**
  * Custom get entry options.

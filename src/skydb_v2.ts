@@ -1,8 +1,8 @@
 import { ResponseType } from "axios";
-import { sign } from "tweetnacl";
+import tweetnacl from "tweetnacl";
 
-import { SkynetClient } from "./client";
-import { DEFAULT_DOWNLOAD_OPTIONS, CustomDownloadOptions } from "./download";
+import { SkynetClient } from "./client.js";
+import { DEFAULT_DOWNLOAD_OPTIONS, CustomDownloadOptions } from "./download.js";
 import {
   DEFAULT_GET_ENTRY_OPTIONS,
   DEFAULT_SET_ENTRY_OPTIONS,
@@ -10,24 +10,24 @@ import {
   RegistryEntry,
   CustomSetEntryOptions,
   validatePublicKey,
-} from "./registry";
-import { CachedRevisionNumber } from "./revision_cache";
-import { BASE64_ENCODED_SKYLINK_SIZE, decodeSkylink, EMPTY_SKYLINK, RAW_SKYLINK_SIZE } from "./skylink/sia";
-import { MAX_REVISION } from "./utils/number";
-import { URI_SKYNET_PREFIX } from "./utils/url";
+} from "./registry.js";
+import { CachedRevisionNumber } from "./revision_cache.js";
+import { BASE64_ENCODED_SKYLINK_SIZE, decodeSkylink, EMPTY_SKYLINK, RAW_SKYLINK_SIZE } from "./skylink/sia.js";
+import { MAX_REVISION } from "./utils/number.js";
+import { URI_SKYNET_PREFIX } from "./utils/url.js";
 import {
   hexToUint8Array,
   trimUriPrefix,
   toHexString,
   stringToUint8ArrayUtf8,
   uint8ArrayToStringUtf8,
-} from "./utils/string";
-import { formatSkylink } from "./skylink/format";
-import { DEFAULT_UPLOAD_OPTIONS, CustomUploadOptions } from "./upload";
-import { areEqualUint8Arrays } from "./utils/array";
-import { decodeSkylinkBase64, encodeSkylinkBase64 } from "./utils/encoding";
-import { DEFAULT_BASE_OPTIONS, extractOptions } from "./utils/options";
-import { JsonData } from "./utils/types";
+} from "./utils/string.js";
+import { formatSkylink } from "./skylink/format.js";
+import { DEFAULT_UPLOAD_OPTIONS, CustomUploadOptions } from "./upload.js";
+import { areEqualUint8Arrays } from "./utils/array.js";
+import { decodeSkylinkBase64, encodeSkylinkBase64 } from "./utils/encoding.js";
+import { DEFAULT_BASE_OPTIONS, extractOptions } from "./utils/options.js";
+import { JsonData } from "./utils/types.js";
 import {
   throwValidationError,
   validateHexString,
@@ -37,13 +37,15 @@ import {
   validateString,
   validateUint8Array,
   validateUint8ArrayLen,
-} from "./utils/validation";
-import { EntryData, MAX_ENTRY_LENGTH } from "./mysky";
+} from "./utils/validation.js";
+import { EntryData, MAX_ENTRY_LENGTH } from "./mysky/index.js";
 
 type SkynetJson = {
   _data: JsonData;
   _v: number;
 };
+
+const { sign } = tweetnacl;
 
 export const DELETION_ENTRY_DATA = new Uint8Array(RAW_SKYLINK_SIZE);
 

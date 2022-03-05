@@ -1,5 +1,5 @@
-import { hexToUint8Array } from "../utils/string";
-import { deriveDiscoverableFileTweak, DiscoverableBucketTweak, hashPathComponent, splitPath } from "./tweak";
+import { hexToUint8Array } from "../utils/string.js";
+import { deriveDiscoverableFileTweak, DiscoverableBucketTweak, hashPathComponent, splitPath } from "./tweak.js";
 
 const fullPath = "skyfeed.hns/preferences/ui.json";
 const paths = ["skyfeed.hns", "preferences", "ui.json"];

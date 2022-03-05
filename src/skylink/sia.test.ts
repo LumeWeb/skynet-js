@@ -1,4 +1,4 @@
-import { hexToUint8Array } from "../utils/string";
+import { hexToUint8Array } from "../utils/string.js";
 import {
   decodeSkylink,
   ERR_SKYLINK_INCORRECT_SIZE,
@@ -8,7 +8,7 @@ import {
   newSkylinkV2,
   newSpecifier,
   SiaSkylink,
-} from "./sia";
+} from "./sia.js";
 
 const skylinkV1 = "XABvi7JtJbQSMAcDwnUnmp2FKDPjg8_tTTFP4BwMSxVdEg";
 const skylinkV2 = "AQA7pRL8JEXcIuDbjsVyucWvprL4aD6feNDWwylo19vS2w";

@@ -1,4 +1,4 @@
-import { SkynetClient } from "./index";
+import { SkynetClient } from "./index.js";
 
 describe("SkynetClient", () => {
   it("should contain all API methods", () => {

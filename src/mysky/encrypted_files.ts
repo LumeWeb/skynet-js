@@ -1,10 +1,10 @@
 import randomBytes from "randombytes";
 import { sanitizePath } from "skynet-mysky-utils";
-import { secretbox } from "tweetnacl";
+import tweetnacl from "tweetnacl";
 
-import { HASH_LENGTH, sha512 } from "../crypto";
-import { hexToUint8Array, stringToUint8ArrayUtf8, toHexString, uint8ArrayToStringUtf8 } from "../utils/string";
-import { JsonData } from "../utils/types";
+import { HASH_LENGTH, sha512 } from "../crypto.js";
+import { hexToUint8Array, stringToUint8ArrayUtf8, toHexString, uint8ArrayToStringUtf8 } from "../utils/string.js";
+import { JsonData } from "../utils/types.js";
 import {
   throwValidationError,
   validateBoolean,
@@ -14,7 +14,9 @@ import {
   validateString,
   validateUint8Array,
   validateUint8ArrayLen,
-} from "../utils/validation";
+} from "../utils/validation.js";
+
+const { secretbox } = tweetnacl;
 
 /**
  * The current response version for encrypted JSON files. Part of the metadata

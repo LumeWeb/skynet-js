@@ -1,6 +1,6 @@
-import { SkynetClient } from "../client";
-import { trimForwardSlash, trimSuffix } from "../utils/string";
-import { getFullDomainUrlForPortal, extractDomainForPortal, ensureUrlPrefix } from "../utils/url";
+import { SkynetClient } from "../client.js";
+import { trimForwardSlash, trimSuffix } from "../utils/string.js";
+import { getFullDomainUrlForPortal, extractDomainForPortal, ensureUrlPrefix } from "../utils/url.js";
 
 /**
  * Constructs the full URL for the given component domain.

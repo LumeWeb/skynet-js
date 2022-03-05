@@ -1,22 +1,22 @@
 import { AxiosResponse, ResponseType } from "axios";
 
-import { SkynetClient } from "./client";
-import { getEntryLink, validateRegistryProof } from "./registry";
-import { buildRequestUrl, Headers } from "./request";
-import { convertSkylinkToBase32, formatSkylink } from "./skylink/format";
-import { parseSkylink } from "./skylink/parse";
-import { isSkylinkV1 } from "./skylink/sia";
-import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options";
-import { trimUriPrefix } from "./utils/string";
-import { addUrlSubdomain, addUrlQuery, makeUrl, URI_HANDSHAKE_PREFIX } from "./utils/url";
+import { SkynetClient } from "./client.js";
+import { getEntryLink, validateRegistryProof } from "./registry.js";
+import { buildRequestUrl, Headers } from "./request.js";
+import { convertSkylinkToBase32, formatSkylink } from "./skylink/format.js";
+import { parseSkylink } from "./skylink/parse.js";
+import { isSkylinkV1 } from "./skylink/sia.js";
+import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options.js";
+import { trimUriPrefix } from "./utils/string.js";
+import { addUrlSubdomain, addUrlQuery, makeUrl, URI_HANDSHAKE_PREFIX } from "./utils/url.js";
 import {
   throwValidationError,
   validateObject,
   validateOptionalObject,
   validateSkylinkString,
   validateString,
-} from "./utils/validation";
-import { JsonData } from "./utils/types";
+} from "./utils/validation.js";
+import { JsonData } from "./utils/types.js";
 
 /**
  * Custom download options.

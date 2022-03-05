@@ -1,5 +1,5 @@
-import { parseSkylink } from "../skylink/parse";
-import { isHexString } from "./string";
+import { parseSkylink } from "../skylink/parse.js";
+import { isHexString } from "./string.js";
 
 /**
  * Validates the given value as a bigint.

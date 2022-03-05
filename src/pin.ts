@@ -1,9 +1,9 @@
 import { AxiosResponse } from "axios";
-import { SkynetClient } from "./client";
-import { formatSkylink } from "./skylink/format";
-import { parseSkylink } from "./skylink/parse";
-import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options";
-import { validateSkylinkString, validateString } from "./utils/validation";
+import { SkynetClient } from "./client.js";
+import { formatSkylink } from "./skylink/format.js";
+import { parseSkylink } from "./skylink/parse.js";
+import { BaseCustomOptions, DEFAULT_BASE_OPTIONS } from "./utils/options.js";
+import { validateSkylinkString, validateString } from "./utils/validation.js";
 
 /**
  * Custom pin options.
